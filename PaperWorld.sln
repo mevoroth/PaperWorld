@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperWorld", "PaperWorld\PaperWorld\PaperWorld.csproj", "{00484B03-B9F4-45C2-BA8F-55BC990B0CCA}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "PaperWorldContent", "PaperWorld\PaperWorldContent\PaperWorldContent.contentproj", "{612BAC87-80FC-43E6-BD76-978414D97F72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00484B03-B9F4-45C2-BA8F-55BC990B0CCA}.Debug|x86.ActiveCfg = Debug|x86
+		{00484B03-B9F4-45C2-BA8F-55BC990B0CCA}.Debug|x86.Build.0 = Debug|x86
+		{00484B03-B9F4-45C2-BA8F-55BC990B0CCA}.Release|x86.ActiveCfg = Release|x86
+		{00484B03-B9F4-45C2-BA8F-55BC990B0CCA}.Release|x86.Build.0 = Release|x86
+		{612BAC87-80FC-43E6-BD76-978414D97F72}.Debug|x86.ActiveCfg = Debug|x86
+		{612BAC87-80FC-43E6-BD76-978414D97F72}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
