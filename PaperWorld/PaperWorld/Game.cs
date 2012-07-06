@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using PaperWorld.models.elements;
 
 namespace PaperWorld
 {
@@ -18,6 +19,7 @@ namespace PaperWorld
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+		private World _world;
 
 		public Game()
 		{
@@ -33,7 +35,10 @@ namespace PaperWorld
 		/// </summary>
 		protected override void Initialize()
 		{
-			// TODO: Add your initialization logic here
+			// TODO: Menu
+
+			_world = new World(Content, "maps\\paperworld_pilot");
+			_world.setHero(new Hero());
 
 			base.Initialize();
 		}
@@ -81,9 +86,10 @@ namespace PaperWorld
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw(GameTime gameTime)
 		{
-			GraphicsDevice.Clear(Color.CornflowerBlue);
+			GraphicsDevice.Clear(Color.Black);
 
 			// TODO: Add your drawing code here
+			
 
 			base.Draw(gameTime);
 		}

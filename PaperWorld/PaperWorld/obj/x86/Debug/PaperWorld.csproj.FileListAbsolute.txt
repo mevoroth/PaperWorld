@@ -1,0 +1,7 @@
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\Content\maps\paperworld_pilot.xnb
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\PaperWorld.exe
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\PaperWorld.pdb
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\obj\x86\Debug\PaperWorld.exe
+C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\obj\x86\Debug\PaperWorld.pdb
