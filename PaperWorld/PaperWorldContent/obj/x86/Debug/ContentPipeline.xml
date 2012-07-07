@@ -2,13 +2,22 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>maps\paperworld_pilot.bmp</Source>
-      <Name>maps\paperworld_pilot</Name>
+      <Source>assets\hero.png</Source>
+      <Name>assets\hero</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\Content\maps\paperworld_pilot.xnb</Output>
-      <Time>2012-07-07T01:20:42.4740594+02:00</Time>
+      <Output>C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\Content\assets\hero.xnb</Output>
+      <Time>2012-07-07T18:42:12.2383467+02:00</Time>
+    </Item>
+    <Item>
+      <Source>maps\base.png</Source>
+      <Name>maps\base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\skana\Documents\Visual Studio 2010\Projects\PaperWorld\PaperWorld\PaperWorld\bin\x86\Debug\Content\maps\base.xnb</Output>
+      <Time>2012-07-07T18:37:25.3959402+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

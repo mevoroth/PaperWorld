@@ -1,1 +1,2 @@
-Content\maps\paperworld_pilot.xnb
+Content\assets\hero.xnb
+Content\maps\base.xnb

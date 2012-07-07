@@ -107,9 +107,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GraphicEngine.cs" />
     <Compile Include="models\Element.cs" />
+    <Compile Include="structs\Direction.cs" />
     <Compile Include="models\elements\Hero.cs" />
-    <Compile Include="models\elements\World.cs" />
+    <Compile Include="models\World.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game.cs" />

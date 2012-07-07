@@ -20,11 +20,14 @@ namespace PaperWorld
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
 		private World _world;
+		private KeyboardHandler _keyboard;
 
 		public Game()
 		{
 			graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
+			graphics.PreferredBackBufferWidth = 640;
+			graphics.PreferredBackBufferHeight = 480;
 		}
 
 		/// <summary>
@@ -37,8 +40,10 @@ namespace PaperWorld
 		{
 			// TODO: Menu
 
-			_world = new World(Content, "maps\\paperworld_pilot");
+			_world = new World();
 			_world.setHero(new Hero());
+			spriteBatch = new SpriteBatch(GraphicsDevice);
+			_keyboard = new KeyboardHandler();
 
 			base.Initialize();
 		}
@@ -51,8 +56,6 @@ namespace PaperWorld
 		{
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(GraphicsDevice);
-
-			// TODO: use this.Content to load your game content here
 		}
 
 		/// <summary>
@@ -72,10 +75,11 @@ namespace PaperWorld
 		protected override void Update(GameTime gameTime)
 		{
 			// Allows the game to exit
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed
+				|| Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Escape))
 				this.Exit();
 
-			// TODO: Add your update logic here
+			_keyboard.Handle(_world, gameTime);
 
 			base.Update(gameTime);
 		}
@@ -89,7 +93,9 @@ namespace PaperWorld
 			GraphicsDevice.Clear(Color.Black);
 
 			// TODO: Add your drawing code here
-			
+			spriteBatch.Begin();
+			_world.Draw(spriteBatch, Content);
+			spriteBatch.End();
 
 			base.Draw(gameTime);
 		}
