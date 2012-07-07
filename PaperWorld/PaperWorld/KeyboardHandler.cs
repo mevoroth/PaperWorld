@@ -10,25 +10,56 @@ namespace PaperWorld
 {
 	class KeyboardHandler
 	{
-		public void Handle(World _world, GameTime gameTime)
+		private delegate void ContextHandler(World _world, GameTime gameTime);
+		private ContextHandler _realHandler;
+
+		public KeyboardHandler()
 		{
-			if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Right))
+			_realHandler = inGame;
+		}
+
+		public void inGame(World _world, GameTime gameTime)
+		{
+			KeyboardState ks = Keyboard.GetState(PlayerIndex.One);
+			if (ks.IsKeyDown(Keys.Right))
 			{
-				_world.moveHero(new Direction(10, 0));
+				_world.Hero.move(new Direction(10, 0));
 			}
-			if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Left))
+			if (ks.IsKeyDown(Keys.Left))
 			{
-				_world.moveHero(new Direction(-10, 0));
+				_world.Hero.move(new Direction(-10, 0));
 			}
 
-			if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Space))
+			if (ks.IsKeyDown(Keys.X))
 			{
-				_world.heroJump(gameTime);
+				_world.Hero.jump(_world, gameTime);
 			}
 			else
 			{
-				_world.heroFall();
+				_world.Hero.fall(_world);
 			}
+
+			if (ks.IsKeyDown(Keys.W))
+			{
+				_world.Hero.paperDart();
+			}
+			if (ks.IsKeyDown(Keys.C))
+			{
+				_world.Hero.clone();
+			}
+			if (ks.IsKeyDown(Keys.F))
+			{
+				_world.Hero.fold();
+			}
+			if (ks.IsKeyDown(Keys.B))
+			{
+				_world.Hero.ball();
+			}
+		}
+
+		public void Handle(World _world, GameTime gameTime)
+		{
+			_realHandler(_world, gameTime);
 		}
 	}
 }

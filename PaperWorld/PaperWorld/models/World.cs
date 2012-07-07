@@ -19,30 +19,37 @@ namespace PaperWorld.models.elements
 		{
 		}
 
-		public void setHero(Hero hero)
+		public Hero Hero
 		{
-			_hero = hero;
-			_hero.Position = _spawn;
+			get { return _hero; }
+			set
+			{
+				_hero = value;
+				_hero.Position = _spawn;
+			}
 		}
-		public void moveHero(Direction d)
-		{
-			_hero.move(d);
-		}
-
 		public void Draw(SpriteBatch spriteBatch, ContentManager content)
 		{
-			spriteBatch.Draw(content.Load<Texture2D>("maps\\base"), new Vector2(0,0), Color.White);
-			_hero.Draw(spriteBatch, content);
+			Vector2 cam = getCamera();
+			Console.WriteLine(cam);
+			spriteBatch.Draw(content.Load<Texture2D>("maps\\base"), new Vector2(-cam.X, -cam.Y), Color.White);
+			_hero.Draw(spriteBatch, content, getCamera());
 		}
 
-		public void heroFall()
+		public Vector2 getCamera()
 		{
-			_hero.fall(this);
-		}
-
-		public void heroJump(GameTime gameTime)
-		{
-			_hero.jump(this, gameTime);
+			Vector2 p = _hero.Position;
+			Console.WriteLine(p);
+			float x = p.X + 200 - 640;
+			if (x < 0)
+			{
+				x = 0;
+			}
+			else if (x > 128)
+			{
+				x = 128;
+			}
+			return new Vector2(x, 0);
 		}
 	}
 }

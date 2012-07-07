@@ -42,6 +42,7 @@ namespace PaperWorld
 
 			_world = new World();
 			_world.setHero(new Hero());
+
 			spriteBatch = new SpriteBatch(GraphicsDevice);
 			_keyboard = new KeyboardHandler();
 
@@ -65,6 +66,7 @@ namespace PaperWorld
 		protected override void UnloadContent()
 		{
 			// TODO: Unload any non ContentManager content here
+			Content.Unload();
 		}
 
 		/// <summary>

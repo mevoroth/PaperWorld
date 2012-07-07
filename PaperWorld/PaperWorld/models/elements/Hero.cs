@@ -17,19 +17,30 @@ namespace PaperWorld.models.elements
 
 		public void move(Direction d)
 		{
-			Position = new Vector2(
-				Position.X + d.XAxis,
-				Position.Y + d.YAxis
-			);
+			float x = Position.X + d.XAxis;
+			float y = Position.Y + d.YAxis;
+			if (x < 10)
+			{
+				x = 10;
+			}
+			else if (x + 130 > 758)
+			{
+				x = 628;
+			}
+			Position = new Vector2(x, y);
 		}
 		//public Vector2 Position
 		//{
 		//    get { return _position; }
 		//    set { _position = value; }
 		//}
-		public void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch, Microsoft.Xna.Framework.Content.ContentManager content)
+		public void Draw(
+			Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch,
+			Microsoft.Xna.Framework.Content.ContentManager content,
+			Vector2 cam
+		)
 		{
-			spriteBatch.Draw(content.Load<Texture2D>("assets\\hero"), Position, Color.White);
+			spriteBatch.Draw(content.Load<Texture2D>("assets\\hero"), new Vector2(Position.X - cam.X, Position.Y - cam.Y), Color.White);
 		}
 
 		public void fall(World w)
@@ -61,7 +72,6 @@ namespace PaperWorld.models.elements
 					&& _isInBound(w))
 				{
 					float tmp = (float)(_lastJump*_lastJump);
-					Console.WriteLine(tmp);
 					Position = new Vector2(
 						Position.X,
 						Position.Y - 25000/tmp
@@ -82,6 +92,31 @@ namespace PaperWorld.models.elements
 		private bool _isInBound(World w)
 		{
 			return true;
+		}
+
+		internal void paperDart()
+		{
+			throw new NotImplementedException();
+		}
+
+		internal void human()
+		{
+			throw new NotImplementedException();
+		}
+
+		internal void clone()
+		{
+			throw new NotImplementedException();
+		}
+
+		internal void fold()
+		{
+			throw new NotImplementedException();
+		}
+
+		internal void ball()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }
