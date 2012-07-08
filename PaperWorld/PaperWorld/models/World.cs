@@ -32,7 +32,8 @@ namespace PaperWorld.models.elements
 		{
 			Vector2 cam = getCamera();
 			Console.WriteLine(cam);
-			spriteBatch.Draw(content.Load<Texture2D>("maps\\base"), new Vector2(-cam.X, -cam.Y), Color.White);
+			spriteBatch.Draw(content.Load<Texture2D>("maps\\base"), new Rectangle((int)-cam.X, (int)-cam.Y, 768, 480), Color.White);
+			//spriteBatch.Draw(content.Load<Texture2D>("maps\\base"), new Vector2(-cam.X, -cam.Y), Color.White);
 			_hero.Draw(spriteBatch, content, getCamera());
 		}
 

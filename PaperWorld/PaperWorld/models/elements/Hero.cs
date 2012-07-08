@@ -94,27 +94,27 @@ namespace PaperWorld.models.elements
 			return true;
 		}
 
-		internal void paperDart()
+		public void paperDart()
 		{
 			throw new NotImplementedException();
 		}
 
-		internal void human()
+		public void human()
 		{
 			throw new NotImplementedException();
 		}
 
-		internal void clone()
+		public void clone()
 		{
 			throw new NotImplementedException();
 		}
 
-		internal void fold()
+		public void fold()
 		{
 			throw new NotImplementedException();
 		}
 
-		internal void ball()
+		public void ball()
 		{
 			throw new NotImplementedException();
 		}

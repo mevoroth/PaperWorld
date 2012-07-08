@@ -41,7 +41,7 @@ namespace PaperWorld
 			// TODO: Menu
 
 			_world = new World();
-			_world.setHero(new Hero());
+			_world.Hero = new Hero();
 
 			spriteBatch = new SpriteBatch(GraphicsDevice);
 			_keyboard = new KeyboardHandler();

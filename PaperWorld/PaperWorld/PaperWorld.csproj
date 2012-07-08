@@ -107,7 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GraphicEngine.cs" />
     <Compile Include="KeyboardHandler.cs" />
     <Compile Include="models\Element.cs" />
     <Compile Include="structs\Direction.cs" />
